@@ -48,9 +48,6 @@ module.exports = (env, argv) => ({
 
   // Tells Webpack to generate "ui.html" and to inline "ui.ts" into it
   plugins: [
-    new webpack.DefinePlugin({
-      'global': {} // Fix missing symbol error when running in developer VM
-    }),
     new HtmlWebpackPlugin({
       inject: "body",
       template: './src/ui.html',
